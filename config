@@ -215,6 +215,15 @@ bindsym Mod1+Ctrl+z exec cmus-remote -r
 bindsym Mod1+Ctrl+l exec cmus-remote -k -5
 bindsym Mod1+Ctrl+r exec cmus-remote -k +5
 
+#cmus
+bindsym Mod1+Ctrl+bracketright exec cmus-remote -n
+bindsym Mod1+Ctrl+bracketleft exec cmus-remote -r
+bindsym Mod1+Ctrl+backslash exec cmus-remote -u
+bindsym Mod1+Ctrl+Up exec cmus-remote -v +10%
+bindsym Mod1+Ctrl+Down exec cmus-remote -v -10%
+bindsym Mod1+Ctrl+Right exec cmus-remote -k +10
+bindsym Mod1+Ctrl+Left exec cmus-remote -k -10
+
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -226,5 +235,8 @@ bindsym Mod1+Ctrl+r exec cmus-remote -k +5
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+
+# layout with xdotool
+bindsym Mod1+Ctrl+j exec ~/.i3/layout01.sh
 
 
