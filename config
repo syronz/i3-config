@@ -177,7 +177,7 @@ bindsym $mod+Shift+Ctrl+6 move container to workspace number $ws16
 bindsym $mod+Shift+Ctrl+7 move container to workspace number $ws17
 bindsym $mod+Shift+Ctrl+8 move container to workspace number $ws18
 bindsym $mod+Shift+Ctrl+9 move container to workspace number $ws19
-bindsym $mod+Shift+Ctrl+10 move container to workspace number $ws20
+bindsym $mod+Shift+Ctrl+0 move container to workspace number $ws20
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -194,10 +194,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $left resize shrink width 10 px or 10 ppt
-        bindsym $down resize grow height 10 px or 10 ppt
-        bindsym $up resize shrink height 10 px or 10 ppt
-        bindsym $right resize grow width 10 px or 10 ppt
+        bindsym $left resize shrink width 7 px or 7 ppt
+        bindsym $down resize grow height 7 px or 7 ppt
+        bindsym $up resize shrink height 7 px or 7 ppt
+        bindsym $right resize grow width 7 px or 7 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -228,6 +228,7 @@ bindsym Mod1+Shift+x exec i3lock
 bindsym Mod1+Ctrl+m exec randomimage1.sh
 bindsym Mod1+Ctrl+w exec randomimage.sh
 
+bindsym Mod1+Ctrl+p exec gnome-screenshot -i
 
 # cmus
 bindsym Mod1+Ctrl+bracketright exec cmus-remote -n
@@ -243,3 +244,12 @@ bindsym Mod1+Ctrl+Left exec cmus-remote -k -10
 bindsym Mod1+Ctrl+j exec ~/.i3/layout_ariexchange_backend.sh
 bindsym Mod1+Ctrl+l exec ~/.i3/layout_isum.sh
 bindsym Mod1+Ctrl+s exec ~/.i3/loremIpsum.sh
+
+# getting class name with this command 'xprop' then click
+assign [class="TelegramDesktop"] $ws16
+# assign [class="Skype"] $ws16
+# assign [class="Slack"] $ws17
+assign [class="discord"] $ws17
+assign [class="Thunderbird"] $ws18
+assign [class="Mysql-workbench-bin"] $ws6
+assign [class="Anki"] $ws19
